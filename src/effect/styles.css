@@ -1,0 +1,137 @@
+#plain-react .tabs {
+  width: 100%;
+  display: inline-block;
+  margin-right: 30px;
+  vertical-align: top;
+  text-align: center;
+}
+html, body {
+  height: 100%;
+  widows: 100%;
+}
+#plain-react .tabs-1 .tab-links {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #868686;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 35px;
+  position: relative;
+  top: 5px;
+}
+
+#plain-react .tabs-1 .tab-link {
+  padding: 0 15px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background: transparent;
+  display: inline-block;
+  position: relative;
+  height: 40px;
+  line-height: 41px;
+  top: -4px;
+  left: -1px;
+  outline: none;
+}
+
+#plain-react .tabs-1 .tab-link:hover,
+#plain-react .tabs-1 .tab-link:focus {
+  color: #666464;
+}
+
+#plain-react .tabs-1 .tab-link-active,
+#plain-react .tabs-1 .tab-link-active:hover,
+#plain-react .tabs-1 .tab-link-active:focus {
+  color: black;
+  font-weight: bold;
+  border: 1px solid #868686;
+  border-bottom: 1px solid white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: white;
+}
+
+#plain-react .tabs-1 .content {
+  padding: 15px;
+  border: 1px solid #868686;
+  border-top: 1px solid transparent;
+}
+
+#plain-react .tabs-1 .tabcontent {
+}
+
+
+#tab-tab1, #tab-tab2, #tab-tab3, #tab-tab4, #tab-tab5, #tab-tab6 {
+  width: 16.6%;
+}
+#tab_content {
+  text-align: center;
+  height: 50%;
+}
+#sign_in1, #sign_in2, #verify_in1, #verify_in2 , #rsa_in1, #rsa_in2, #effect_in1, #effect_in2 {
+  width: 30%;
+  float: left;
+}
+#tabpanel-tab1, #tabpanel-tab2, #tabpanel-tab3, #tabpanel-tab4, #tabpanel-tab5, #tabpanel-tab6 {
+  width: 100%;
+}
+#space {
+  width: 17%;
+  float: left;
+}
+#semi-space {
+  width: 6%;
+  float: left;
+}
+#signIn1, #signIn2, #signIn3, #verifyIn1, #verifyIn2, #effectDecIn4, #rsaDecIn3, #verifyIn3, #rsaEncIn1, #rsaEncIn2, #rsaDecIn1, #rsaDecIn2, #effectEncIn1, #effectDecIn3,#effectEncIn2, #effectDecIn1, #effectDecIn2, #input, #output {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  border-radius: 8px 8px 8px 8px; 
+}
+td#input {
+  padding: 15px;
+  height: 35px;
+  border-spacing: 10px;
+}
+td#output_btn {
+  height: 35px;
+  float: right;
+}
+#output_text, #sign_out, #verify_out, #rsaEnc_out, #effectEnc_out, #effectDec_out, #rsaDec_out {
+  height: 133px;
+  resize: none;
+  display: inline-block;
+  width: 100%;
+  font-weight: 400;
+  border-radius: 8px 8px 8px 8px; 
+}
+#sign_btn, #verify_btn, #encrypt_btn, #decrypt_btn {
+  width: 150%;
+  height: 120%;
+  font-size: 25px;
+  font-weight: bold;
+  color: #ffffff;
+  outline: 0;
+  float: right;
+  border: 0;
+  border-radius: 8px 8px 8px 8px; 
+  background-color: #ed1b24;
+}
+#sign_btn:hover, #verify_btn:hover, #encrypt_btn:hover, #decrypt_btn:hover {
+  background-color: #E7E7E7;
+  color: black;
+}
+#aTag, #aTag_pin, #aTag_pin2, #aTag_pin3{
+  float: left;
+  background-color:yellow;
+}
+
+#delete {
+  content: url("../img/del.jpg");
+  width: 60%;
+  float: left;
+  padding-top: 2px;
+}
