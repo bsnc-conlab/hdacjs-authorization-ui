@@ -128,10 +128,3 @@ td#output_btn {
   float: left;
   background-color:yellow;
 }
-
-#delete {
-  content: url("../img/del.jpg");
-  width: 60%;
-  float: left;
-  padding-top: 2px;
-}

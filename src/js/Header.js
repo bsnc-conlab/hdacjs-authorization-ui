@@ -33,7 +33,7 @@ export default class Header extends React.Component {
     render(){
         return (
           <div id="header">
-            <div id="logo"><a href="javascript:location.reload()"><img src={logo}/></a></div>
+            <div id="logo"><a href="javascript:location.reload()"><img src={logo} width="280px"/></a></div>
             <div id="head-title"><a>HdacJs Test UI</a></div>
             <div id="head-btn"><button id="btn" onClick={() => this.open('fadeInDown')}>create key pairs</button>
             <Modal visible={this.state.fadeInDown} effect="fadeInDown" onClickAway={() => this.close('fadeInDown')} width="450" height="500">
