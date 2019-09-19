@@ -1,7 +1,7 @@
 # hdacjs-authorization-ui
 
-- This project help you to understand about HdacJS-lib. 
-- This provides a visual representation of inputs and outputs for verify, rsa encrypt, rsa decrypt, double encrypt (called effect encrypt) and double decrypt (called effect decrypt). 
+This project help you to understand about HdacJS-lib. <br>
+This provides a visual representation of inputs and outputs for verify, rsa encrypt, rsa decrypt, double encrypt (called effect encrypt) and double decrypt (called effect decrypt). 
 
 ## Quick Start
 ```sh
@@ -11,6 +11,10 @@ npm install
 npm start 
 ```
 That's it! This is very simple and easy, isn't it?
+
+## What is React?
+ - why choose this?
+## What is hdaclib-js
 
 ## Available Scripts
 
