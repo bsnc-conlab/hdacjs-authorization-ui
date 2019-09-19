@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Tabs from '../tab_lib/Tabs.js'
-import TabContent from '../tab_lib/TabContent.js'
-import TabLink from '../tab_lib/TabLink.js'
+import Tabs from './lib/Tabs.js'
+import TabContent from './lib/TabContent.js'
+import TabLink from './lib/TabLink.js'
 import * as hdac from 'hdacjs-lib';
 
 import '../effect/styles.css';
