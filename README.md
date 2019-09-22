@@ -3,18 +3,64 @@
 This project help you to understand about HdacJS-lib. <br>
 This provides a visual representation of inputs and outputs for verify, rsa encrypt, rsa decrypt, double encrypt (called effect encrypt) and double decrypt (called effect decrypt). 
 
-## Quick Start
+## Let's Start
 ```sh
 # If you don't have npm, please install npm first.
 
 npm install 
 npm start 
 ```
-That's it! This is very simple and easy, isn't it?
 
-## What is React?
- - why choose this?
+
+## What is React.JS?
+ React is a JavaScript library for building user interfaces.<br>
+ - Declarative <br>
+ React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more predictable and easier to debug.
+ <br><br>
+ - Component-Based <br>
+ Build encapsulated components that manage their own state. Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.
+  <br>
 ## What is hdaclib-js
+
+
+
+
+## File Structure
+```
+hdacjs-authorization-ui
+├── README.md
+├── tsconfig.json
+├── package.json
+├── .gitignore
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   └── manifest.json
+└── src
+    ├── index.js
+    ├── react-app-env.ts
+    ├── serviceWorker.js
+    ├── effect
+    │   ├── App.css
+    │   ├── fadeInDown.js
+    │   ├── index.css
+    │   ├── jqx.css
+    │   ├── styles.js
+    │   └── styles.css
+    ├── img
+    │   └── logo.png
+    └── js
+        ├── App.js
+        ├── Header.js
+        ├── InNOut.js
+        ├── KeyListNew.tsx
+        ├── creawteRowData.js
+        └── lib
+           ├── TabContent.js
+           ├── TabLink.js
+           ├── Tabs.js
+           └── generatedate.ts
+```
 
 ## Available Scripts
 
