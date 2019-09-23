@@ -20,7 +20,7 @@ export default class KeyListNew extends React.PureComponent<{storage: number, de
     private unselectedRowIndex = React.createRef<HTMLSpanElement>();
     private selected = 0;
     constructor(props: {storage: number, delete: Function}) {
-        super(props);
+        super(props); 
         this.scrollToBtnOnClick = this.scrollToBtnOnClick.bind(this);
         this.enableHoverOnChange = this.enableHoverOnChange.bind(this);
         this.myGridOnRowSelect = this.myGridOnRowSelect.bind(this);

@@ -4,17 +4,14 @@ This project help you to understand about HdacJS-lib. <br>
 This provides a visual representation of inputs and outputs for verify, rsa encrypt, rsa decrypt, double encrypt (called effect encrypt) and double decrypt (called effect decrypt). 
 
 ## Let's Start
+
+| Name | Recommended Version | Installation Guide |
+| :-- | :-- | :-- |
+| npm | 6.9.0 | sudo apt-get install npm -y |
+| node.js | 10.15.3 | sudo apt-get install -y build-essential<br>sudo apt-get install curl<br>curl -sL https://deb.nodesource.com/setup_10.x|sudo -E bash --<br>sudo apt-get install -y node.js |
+| git | 2.7.4 | sudo apt-get install git -y |
+
 ```sh
-# If you have npm and node.js, please skip fllow installation.
-sudo apt-get update
-# install node.js
-sudo apt-get install -y build-essential
-sudo apt-get install curl
-curl -sL https://deb.nodesource.com/setup_10.x|sudo -E bash --
-sudo apt-get install -y node.js
-# install npm and git
-sudo apt-get install npm -y
-sudo apt-get install git -y
 # clone this project
 git clone https://github.com/bsnc-conlab/hdacjs-authorization-ui.git
 
