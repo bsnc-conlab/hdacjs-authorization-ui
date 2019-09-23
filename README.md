@@ -1,11 +1,22 @@
-# hdacjs-authorization-ui
+# hdacjs-authorization-ui  &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE)
 
 This project help you to understand about HdacJS-lib. <br>
 This provides a visual representation of inputs and outputs for verify, rsa encrypt, rsa decrypt, double encrypt (called effect encrypt) and double decrypt (called effect decrypt). 
 
 ## Let's Start
 ```sh
-# If you don't have npm, please install npm first.
+# If you have npm and node.js, please skip fllow installation.
+sudo apt-get update
+# install node.js
+sudo apt-get install -y build-essential
+sudo apt-get install curl
+curl -sL https://deb.nodesource.com/setup_10.x|sudo -E bash --
+sudo apt-get install -y node.js
+# install npm and git
+sudo apt-get install npm -y
+sudo apt-get install git -y
+# clone this project
+git clone https://github.com/bsnc-conlab/hdacjs-authorization-ui.git
 
 npm install 
 npm start 
@@ -96,3 +107,6 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+
+# License [MIT](LICENSE)
