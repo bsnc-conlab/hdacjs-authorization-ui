@@ -9,6 +9,7 @@ import * as hdac from 'hdacjs-lib';
 class App extends React.Component {
     constructor(props) {
         super(props);
+        sessionStorage.setItem("selected","")
         this.state = { storage: localStorage.length }
         this.createKeyPairs = this.createKeyPairs.bind(this);
         this.delete = this.delete.bind(this);

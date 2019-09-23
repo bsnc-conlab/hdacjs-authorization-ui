@@ -70,7 +70,7 @@ export default class InNOut extends React.Component {
       alert('Please check address.');
       error ='error';
     }
-    if (signature == '') {
+    if (error != 'error' && signature == '') {
       alert('Please check signed message.');
       error ='error';
     }
@@ -103,7 +103,7 @@ export default class InNOut extends React.Component {
       alert('Please check private key.');
       error = 'error';
     }
-    if (encMsg == '') {
+    if (error != 'error' && encMsg == '') {
       alert('Please check RSA encypted message.');
       error = 'error';
     }
@@ -145,11 +145,11 @@ export default class InNOut extends React.Component {
       alert('Please check private key.');
       error = 'error';
     }
-    if(encKey == '') {
+    if(error != 'error' && encKey == '') {
       alert('Please check effect encypted key.');
       error = 'error';
     }
-    if(encMsg == '') {
+    if(error != 'error' && encMsg == '') {
       alert('Please check effect encypted message.');
       error = 'error';
     }
