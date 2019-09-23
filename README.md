@@ -21,8 +21,9 @@ Javascript Library of bitcoin-base blockchian hdac.<br>
  <br><br>
  - Component-Based <br>
  Build encapsulated components that manage their own state. Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.
-  <br>
+
 ## File Structure
+
 ```sh
 hdacjs-authorization-ui
 ├── README.md
