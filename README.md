@@ -10,7 +10,9 @@ This provides a visual representation of inputs and outputs for verify, rsa encr
 npm install 
 npm start 
 ```
-
+## What is hdaclib-js
+Javascript Library of bitcoin-base blockchian hdac.<br>
+[If you want to other information about hdacjs-lib](https://github.com/bsnc-conlab/hdacjs-lib)
 
 ## What is React.JS?
  React is a JavaScript library for building user interfaces.<br>
@@ -20,11 +22,6 @@ npm start
  - Component-Based <br>
  Build encapsulated components that manage their own state. Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.
   <br>
-## What is hdaclib-js
-
-
-
-
 ## File Structure
 ```
 hdacjs-authorization-ui
