@@ -18,6 +18,7 @@ sudo apt-get install git -y
 # clone this project
 git clone https://github.com/bsnc-conlab/hdacjs-authorization-ui.git
 
+cd hdacjs-authorization-ui
 npm install 
 npm start 
 ```

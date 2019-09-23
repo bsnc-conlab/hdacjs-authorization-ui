@@ -8,7 +8,7 @@
     "babel-eslint": "10.0.1",
     "crypto-js": "^3.1.9-1",
     "eslint": "^5.16.0",
-    "hdacjs-lib": "git+https://github.com/bsnc-conlab/hdacjs-lib.git",
+    "hdacjs-lib": "https://github.com/bsnc-conlab/hdacjs-lib.git",
     "immutable": "3.8.2",
     "jqwidgets-scripts": "^8.1.4",
     "react": "^16.8.6",
