@@ -47,16 +47,16 @@ export default class InNOut extends React.Component {
     var value = JSON.parse(localStorage.getItem(sessionStorage.getItem('selected')));
     var error = '';
     if(key == ''){
-      alert('Please Enter Your Private Key!!!');
-      error ='error';
-    }
-    if(value.isEncrypted != false && pwd == ''){
-      alert('Please Enter Your PASSWORD!!!');
+      alert('Please Enter Your Private Key.');
       error ='error';
     }
     if(error != 'error'){
-      
+      try {
       var signature = hdac.sign(msg, key, pwd);
+      } catch(e) {
+        console.log(e);
+        alert('Please check pin-code.');
+      }
       document.getElementById('sign_out').value = '';
       document.getElementById('sign_out').value = signature;
     }
@@ -65,53 +65,105 @@ export default class InNOut extends React.Component {
     var msg = document.getElementById('verifyIn1').value;
     var addr = document.getElementById('verifyIn2').value;
     var signature = document.getElementById('verifyIn3').value;
-    
-    var result = hdac.verify(msg, addr, signature);
-
-    document.getElementById('verify_out').value = result;
+    var error = '';
+    if(addr == '') {
+      alert('Please check address.');
+      error ='error';
+    }
+    if (signature == '') {
+      alert('Please check signed message.');
+      error ='error';
+    }
+    if(error != 'error'){
+      var result = hdac.verify(msg, addr, signature);
+      document.getElementById('verify_out').value = result;
+    }
   }
   RsaEnc_action(){
     var msg = document.getElementById('rsaEncIn1').value;
     var pubkey = document.getElementById('rsaEncIn2').value;
-    var result = hdac.rsaEncrypt(pubkey, msg).then(function(result) {      
-      document.getElementById('rsaEnc_out').value = result.toString('hex');
-    });
-
-    
+    var error = '';
+    if(pubkey == '') {
+      alert('Please check uncompressed public key.');
+      error = 'error';
+    }
+    if (error != 'error'){
+      var result = hdac.rsaEncrypt(pubkey, msg).then(function(result) {      
+        document.getElementById('rsaEnc_out').value = result.toString('hex');
+      });
+    }
   }
   RsaDec_action() {
     var encMsg = document.getElementById('rsaDecIn2').value;
     var prikey = document.getElementById('rsaDecIn1').value;
     var pin = document.getElementById('rsaDecIn3').value;
     encMsg = Buffer.from(encMsg, 'hex');
-    if(pin != ""){
-      prikey = hdac.aesDecrypt(prikey, pin);
+    var error = '';
+    if(prikey == '') {
+      alert('Please check private key.');
+      error = 'error';
     }
-    hdac.rsaDecrypt(prikey, encMsg).then(function(result) {    
-      document.getElementById('rsaDec_out').value = result.toString();
-    });
+    if (encMsg == '') {
+      alert('Please check RSA encypted message.');
+      error = 'error';
+    }
+    if (error != 'error'){
+      if(pin != ""){
+        prikey = hdac.aesDecrypt(prikey, pin);
+      }
+      hdac.rsaDecrypt(prikey, encMsg).then(function(result) {    
+        document.getElementById('rsaDec_out').value = result.toString();
+      }).catch(function(e) {
+        alert('Please check pin-code.')
+      });
+    }
   }
   EffectEnc_action() {
     var msg = document.getElementById('effectEncIn1').value;
     var pubkey = document.getElementById('effectEncIn2').value;
-    hdac.effectiveEncrypt(msg, pubkey).then(function(response) {
-      effected = response;
-      var result = "encryptedKey: "+response.key.toString('hex')+"\nencryptedMsg: "+response.msg;
+    var error = '';
+    if(pubkey == '') {
+      alert('Please check public key.');
+      error = 'error';
+    }
+    if( error != 'error'){
+      hdac.effectiveEncrypt(msg, pubkey).then(function(response) {
+        effected = response;
+        var result = "encryptedKey: "+response.key.toString('hex')+"\nencryptedMsg: "+response.msg;
       
-      document.getElementById('effectEnc_out').value = result;
-    }) 
+        document.getElementById('effectEnc_out').value = result;
+      });
+    } 
   }
   EffectDec_action() {
     var prikey = document.getElementById('effectDecIn1').value;
     var encKey = document.getElementById('effectDecIn2').value;
     var encMsg = document.getElementById('effectDecIn3').value;
-    var pin = document.getElementById('effectDecIn4').value;
-    hdac.effectiveDecrypt(encMsg, encKey,prikey, pin).then(function(result) {
-      document.getElementById('effectDec_out').value = result;
-    })
+    var pin = document.getElementById('effectDecIn4').value;  
+    var error = '';
+    if(prikey == '') {
+      alert('Please check private key.');
+      error = 'error';
+    }
+    if(encKey == '') {
+      alert('Please check effect encypted key.');
+      error = 'error';
+    }
+    if(encMsg == '') {
+      alert('Please check effect encypted message.');
+      error = 'error';
+    }
+    if( error != 'error') {
+      hdac.effectiveDecrypt(encMsg, encKey,prikey, pin).then(function(result) {  
+        document.getElementById('effectDec_out').value = result;
+      }).catch(function(e) {
+        console.log(e);
+        alert('Please check pin-code.');
+      });
+    }
   }
 
-  verify_tab() {
+  verify_tab(){
     var msg = document.getElementById('verifyIn1');
     var addr = document.getElementById('verifyIn2');
     var signed_msg = document.getElementById('verifyIn3');
@@ -177,10 +229,6 @@ export default class InNOut extends React.Component {
       encKey.setAttribute("disabled","true");
     }
   }
-
-
-
-
 
   render(){
     return (
