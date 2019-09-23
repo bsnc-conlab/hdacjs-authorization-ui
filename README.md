@@ -8,7 +8,7 @@ This provides a visual representation of inputs and outputs for verify, rsa encr
 | Name | Recommended Version | Installation Guide |
 | :-- | :-- | :-- |
 | npm | 6.9.0 | sudo apt-get install npm -y |
-| node.js | 10.15.3 | sudo apt-get install -y build-essential<br>sudo apt-get install curl<br>curl -sL https://deb.nodesource.com/setup_10.x|sudo -E bash --<br>sudo apt-get install -y node.js |
+| node.js | 10.15.3 | sudo apt-get install -y build-essential<br>sudo apt-get install curl -y<br>curl -sL https://deb.nodesource.com/setup_10.x &#124; sudo -E bash -- <br>sudo apt-get install -y nodejs |
 | git | 2.7.4 | sudo apt-get install git -y |
 
 ```sh
