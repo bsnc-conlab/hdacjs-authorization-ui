@@ -83,7 +83,11 @@ export default class InNOut extends React.Component {
     var msg = document.getElementById('rsaEncIn1').value;
     var pubkey = document.getElementById('rsaEncIn2').value;
     var error = '';
-    if(pubkey == '') {
+    if(msg == '') {
+      alert('Please check message.');
+      error = 'error';
+    }
+    if(error != 'error' && pubkey == '') {
       alert('Please check uncompressed public key.');
       error = 'error';
     }
@@ -111,7 +115,7 @@ export default class InNOut extends React.Component {
       if(pin != ""){
         prikey = hdac.aesDecrypt(prikey, pin);
       }
-      hdac.rsaDecrypt(prikey, encMsg).then(function(result) {    
+      hdac.rsaDecrypt(prikey, encMsg).then(function(result) {            
         document.getElementById('rsaDec_out').value = result.toString();
       }).catch(function(e) {
         alert('Please check pin-code.')
